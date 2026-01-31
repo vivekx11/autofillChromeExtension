@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Form Filler (Smart & Safe)",
+  "version": "1.0.0",
+  "description": "Automatically fill web forms using saved data with privacy-first approach",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Auto Form Filler"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "commands": {
+    "fill-form": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F",
+        "mac": "Command+Shift+F"
+      },
+      "description": "Fill form with saved data"
+    }
+  }
+}

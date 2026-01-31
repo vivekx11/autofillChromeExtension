@@ -1,5 +1,6 @@
 // Content script for Auto Form Filler extension
 console.log('🚀 Auto Form Filler: Content script loaded!');
+// Class instantiation: Creates the AutoFormFiller object to manage form auto-filling functionality
 
 class AutoFormFiller {
   constructor() {
@@ -10,6 +11,7 @@ class AutoFormFiller {
     console.log('🚀 Auto Form Filler: Initializing...');
     this.init();
   }
+    // Initialization method to set up event listeners and load stored user data
 
   async init() {
     try {
@@ -266,6 +268,7 @@ class AutoFormFiller {
     console.log('✅ Fill button added to DOM');
   }
 
+    // Fill form fields with matching user data and trigger change events for validation
   fillForm(fields) {
     let filledCount = 0;
 
@@ -368,6 +371,7 @@ class AutoFormFiller {
     );
   }
 
+    // Display styled notification with auto-dismiss animation after form filling operations
   showNotification(message, type = 'success') {
     // Remove existing notifications
     const existing = document.querySelectorAll('.auto-filler-notification');
@@ -416,6 +420,7 @@ class AutoFormFiller {
 }
 
 // Initialize the auto form filler
+// Checks if DOM is still loading before creating the auto form filler instance
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     new AutoFormFiller();
@@ -430,4 +435,5 @@ chrome.commands?.onCommand.addListener((command) => {
     const autoFiller = new AutoFormFiller();
     autoFiller.fillAllFormsOnPage();
   }
+
 });

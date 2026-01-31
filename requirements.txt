@@ -1,0 +1,28 @@
+# Chrome Extension - Auto Form Filler
+# No external dependencies required
+# This extension uses only built-in Chrome APIs
+
+# Development Dependencies (Optional)
+# For code linting and formatting
+eslint>=8.0.0
+prettier>=2.8.0
+
+# Build Tools (Optional)
+# For advanced extension development
+webpack>=5.0.0
+webpack-cli>=5.0.0
+
+# Testing (Optional)
+# For unit and integration testing
+jest>=29.0.0
+selenium-webdriver>=4.0.0
+
+# Note:
+# This is a pure JavaScript Chrome Extension that doesn't require installation
+# of Python packages. The requirements.txt file is included for completeness
+# and documentation purposes.
+#
+# If you're working on automation or testing, you may need:
+# - selenium
+# - pytest
+# - pytest-selenium
